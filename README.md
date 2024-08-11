@@ -7,5 +7,6 @@
 
 ## Notes.
 To avoid conflicts with existing host services:
-  changed the web server port to 88 (./docker-compose.yml:11)
-  Changed the Mqsql port to 3303 (./docker-compose.yml:30)
+  Changed the web server port to 88 (./docker-compose.yml:10)
+  Removed exposed ports for mysql and redis as they are handled by the links between containers.
+  The only host ports required now are 88 (web server) and 8080 (phpmyadmin)
